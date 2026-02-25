@@ -7,12 +7,7 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    /**
-     * トップページを表示する
-     * 
-     * @return \Illuminate\View\View
-     */
-     public function index()
+    public function index()
     {
         return view('welcome');
     }
@@ -20,5 +15,10 @@ class WelcomeController extends Controller
     public function second()
     {
         return view('welcome_second');
+    }
+
+    public function sard()
+    {
+        return view('welcome_sard');
     }
 }

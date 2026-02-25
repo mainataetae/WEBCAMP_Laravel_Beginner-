@@ -22,3 +22,5 @@ use App\Http\Controllers\WelcomeController;
 Route::get('/',[WelcomeController::class,'index']);
 
 Route::get('/welcome/second',[WelcomeController::class,'second']);
+
+Route::get('/welcome/sard',[WelcomeController::class,'sard']);
