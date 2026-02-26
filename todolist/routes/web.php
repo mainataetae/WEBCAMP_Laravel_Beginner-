@@ -19,7 +19,7 @@ use App\Http\Controllers\WelcomeController;
 //});
 
 //Route::get('/',[\App\HttpControllers\WellcomeController::class,'index']);
-Route::get('/',[WelcomeController::class,'index']);
+Route::get('/welcome',[WelcomeController::class,'index']);
 
 Route::get('/welcome/second',[WelcomeController::class,'second']);
 
