@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,11 @@ use App\Http\Controllers\WelcomeController;
 //});
 
 //Route::get('/',[\App\HttpControllers\WellcomeController::class,'index']);
+
+//タスク管理システム
+Route::get('/',[AuthController::class,'index']);
+
+//テスト用
 Route::get('/welcome',[WelcomeController::class,'index']);
-
 Route::get('/welcome/second',[WelcomeController::class,'second']);
-
 Route::get('/welcome/sard',[WelcomeController::class,'sard']);
