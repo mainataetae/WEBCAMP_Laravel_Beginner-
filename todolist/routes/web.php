@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,6 @@ Route::get('/welcome',[WelcomeController::class,'index']);
 Route::get('/welcome/second',[WelcomeController::class,'second']);
 Route::get('/welcome/sard',[WelcomeController::class,'sard']);
 
+// form入力テスト用
+Route::get('/test', [TestController::class, 'index']);
+Route::post('/test/input', [TestController::class, 'input']);
