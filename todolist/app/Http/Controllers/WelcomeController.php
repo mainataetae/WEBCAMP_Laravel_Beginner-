@@ -21,4 +21,9 @@ class WelcomeController extends Controller
     {
         return view('welcome_sard');
     }
+
+    public function five()
+    {
+        return view('welcome_for');
+    }
 }
