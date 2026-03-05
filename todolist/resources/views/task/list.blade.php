@@ -39,14 +39,14 @@
             <td>{{ $task->name }}
             <td>{{ $task->period }}
             <td>{{ $task->getPriorityString() }}
-            <td><a href="./detail.html">詳細閲覧</a>
+            <td><a href="{{ route('detail',['task_id' => $task->id]) }}">詳細閲覧</a>
             <td><a href="./edit.html">編集</a>
             <td><form action="./top.html"><button>完了</button></form>
         @endforeach
         </table>
         <!-- ページネーション -->
         {{-- {{ $list->links() }} --}}
-        現在 {{ $list->currentPAge() }} ページ目<br>
+        現在 {{ $list->currentPage() }} ページ目<br>
         @if($list->onFirstPage() === false)
             <a href="/task/list">最初のページ</a>
         @else
