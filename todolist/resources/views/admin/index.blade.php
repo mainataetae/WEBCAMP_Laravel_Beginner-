@@ -9,11 +9,11 @@
                 {{$error}}<br>
             @endforeach
             </div>
-        @endif
+        @endift
         <form action="/admin/login" method="post">
             @csrf
             ログインID：<input type="text" name="login_id" value="{{ old('login_id') }}"><br>
             パスワード：<input type="password" name="password"><br>
-            <button>ログインする</button>
+            <button class="btn btn-primary mb-3">ログインする</button>
         </form>
 @endsection
