@@ -18,8 +18,8 @@ return new class extends Migration
             $table->datetime('email_verified_at')->nullable();
             $table->string('password', 255);
             $table->rememberToken();
-            $table->datetime('cleated_at')->useCurrent();
-            $table->datetime('update_at')->useCurrent()->useCurrentOnUpdate();
+            $table->datetime('created_at')->useCurrent();
+            $table->datetime('updated_at')->useCurrent()->useCurrentOnUpdate();
 
             $table->collation = 'utf8mb4_bin';
         });
