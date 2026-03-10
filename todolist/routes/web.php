@@ -6,7 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\CompletedTaskController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserController as UserRegisterController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
@@ -65,5 +65,5 @@ Route::prefix('/admin')->group(function () {
 });
 
 //会員登録画面
-Route::get('/user/register',[UserController::class,'index'])->name('user.register');
-Route::post('/user/register',[UserController::class,'register'])->name('user.register.post');
+Route::get('/user/register',[UserRegisterController::class,'index'])->name('user.register');
+Route::post('/user/register',[UserRegisterController::class,'register'])->name('user.register.post');
